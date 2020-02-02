@@ -18,13 +18,19 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Integer> answers = new ArrayList<Integer>();
     int locationOfCorrectAnswer;
     TextView resultTextView;
+    TextView scoreTextView;
+    int score = 0;
+    int numberOfQuestions = 0;
+
 
     public void chooseAnswer(View view) {
         if (Integer.toString(locationOfCorrectAnswer).equals(view.getTag().toString())) {
             resultTextView.setText("Correct!");
+            score++;
         } else {
             resultTextView.setText("Incorrect.");
         }
+        numberOfQuestions++;
     }
 
     public void start(View view) {
@@ -44,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         Button button2 = findViewById(R.id.button2);
         Button button3 = findViewById(R.id.button3);
         resultTextView = findViewById(R.id.resultTextView);
+        scoreTextView = findViewById(R.id.scoreTextView);
 
         Random random = new Random();
 
