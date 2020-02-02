@@ -43,14 +43,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         startButton = findViewById(R.id.startButton);
+        resultTextView = findViewById(R.id.resultTextView);
+        scoreTextView = findViewById(R.id.scoreTextView);
 
         TextView mathsTextView = findViewById(R.id.mathsTextView);
         Button button0 = findViewById(R.id.button0);
         Button button1 = findViewById(R.id.button1);
         Button button2 = findViewById(R.id.button2);
         Button button3 = findViewById(R.id.button3);
-        resultTextView = findViewById(R.id.resultTextView);
-        scoreTextView = findViewById(R.id.scoreTextView);
+
 
         Random random = new Random();
 
