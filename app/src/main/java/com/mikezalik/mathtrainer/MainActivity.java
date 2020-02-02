@@ -3,6 +3,7 @@ package com.mikezalik.mathtrainer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Integer> answers = new ArrayList<Integer>();
 
     public void chooseAnswer(View view) {
-
+        view.getTag().toString();
+        Log.i("Tag:", view.getTag().toString());
     }
 
     public void start(View view) {
