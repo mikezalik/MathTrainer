@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button startButton;
     ArrayList<Integer> answers = new ArrayList<Integer>();
+    int locationOfCorrectAnswer;
 
     public void chooseAnswer(View view) {
         view.getTag().toString();
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         mathsTextView.setText(Integer.toString(a) + " + " + Integer.toString(b));
 
-        int locationOfCorrectAnswer = random.nextInt(4);
+        locationOfCorrectAnswer = random.nextInt(4);
 
         for (int i = 0; i < 4; i++) {
             if (i == locationOfCorrectAnswer) {
