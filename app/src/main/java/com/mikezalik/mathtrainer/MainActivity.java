@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         }
         numberOfQuestions++;
         scoreTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
+        newQuestion();
     }
 
     public void start(View view) {
@@ -55,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
         mathsTextView.setText(Integer.toString(a) + " + " + Integer.toString(b));
 
         locationOfCorrectAnswer = random.nextInt(4);
+
+        answers.clear();
 
         for (int i = 0; i < 4; i++) {
             if (i == locationOfCorrectAnswer) {
