@@ -14,11 +14,11 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button startButton;
     ArrayList<Integer> answers = new ArrayList<Integer>();
-    int locationOfCorrectAnswer;
+    Button startButton;
     TextView resultTextView;
     TextView scoreTextView;
+    int locationOfCorrectAnswer;
     int score = 0;
     int numberOfQuestions = 0;
 
