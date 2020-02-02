@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             if (i == locationOfCorrectAnswer) {
                 answers.add(a + b);
+            } else {
+                answers.add(random.nextInt(41));
             }
         }
     }
