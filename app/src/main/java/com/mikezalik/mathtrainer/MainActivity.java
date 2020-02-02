@@ -15,7 +15,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     ArrayList<Integer> answers = new ArrayList<Integer>();
-    Button startButton;
+
     TextView resultTextView;
     TextView scoreTextView;
     TextView mathsTextView;
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     int score = 0;
     int numberOfQuestions = 0;
 
+    Button startButton;
     Button button0;
     Button button1;
     Button button2;
@@ -70,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
         button1.setText(Integer.toString(answers.get(1)));
         button2.setText(Integer.toString(answers.get(2)));
         button3.setText(Integer.toString(answers.get(3)));
-
     }
 
     @Override
@@ -82,11 +82,12 @@ public class MainActivity extends AppCompatActivity {
         resultTextView = findViewById(R.id.resultTextView);
         scoreTextView = findViewById(R.id.scoreTextView);
 
-        TextView mathsTextView = findViewById(R.id.mathsTextView);
-        Button button0 = findViewById(R.id.button0);
-        Button button1 = findViewById(R.id.button1);
-        Button button2 = findViewById(R.id.button2);
-        Button button3 = findViewById(R.id.button3);
+        mathsTextView = findViewById(R.id.mathsTextView);
+
+        button0 = findViewById(R.id.button0);
+        button1 = findViewById(R.id.button1);
+        button2 = findViewById(R.id.button2);
+        button3 = findViewById(R.id.button3);
 
 
         Random random = new Random();
