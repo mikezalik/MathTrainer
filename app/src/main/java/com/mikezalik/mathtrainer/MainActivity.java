@@ -18,23 +18,59 @@ public class MainActivity extends AppCompatActivity {
     Button startButton;
     TextView resultTextView;
     TextView scoreTextView;
+    TextView mathsTextView;
+
     int locationOfCorrectAnswer;
     int score = 0;
     int numberOfQuestions = 0;
 
+    Button button0;
+    Button button1;
+    Button button2;
+    Button button3;
+
 
     public void chooseAnswer(View view) {
         if (Integer.toString(locationOfCorrectAnswer).equals(view.getTag().toString())) {
-            resultTextView.setText("Correct!");
+            resultTextView.setText("Correct");
             score++;
         } else {
-            resultTextView.setText("Incorrect.");
+            resultTextView.setText("Incorrect");
         }
         numberOfQuestions++;
+        scoreTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
     }
 
     public void start(View view) {
         startButton.setVisibility(View.INVISIBLE);
+    }
+
+    public void newQuestion () {
+        Random random = new Random();
+
+        int a = random.nextInt(21);
+        int b = random.nextInt(21);
+
+        mathsTextView.setText(Integer.toString(a) + " + " + Integer.toString(b));
+
+        locationOfCorrectAnswer = random.nextInt(4);
+
+        for (int i = 0; i < 4; i++) {
+            if (i == locationOfCorrectAnswer) {
+                answers.add(a + b);
+            } else {
+                int wrongAnswer = random.nextInt(41);
+                while (wrongAnswer == a + b) {
+                    wrongAnswer = random.nextInt(41);
+                }
+                answers.add(wrongAnswer);
+            }
+        }
+        button0.setText(Integer.toString(answers.get(0)));
+        button1.setText(Integer.toString(answers.get(1)));
+        button2.setText(Integer.toString(answers.get(2)));
+        button3.setText(Integer.toString(answers.get(3)));
+
     }
 
     @Override
