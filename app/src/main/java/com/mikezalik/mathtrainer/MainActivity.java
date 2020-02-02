@@ -46,7 +46,11 @@ public class MainActivity extends AppCompatActivity {
             if (i == locationOfCorrectAnswer) {
                 answers.add(a + b);
             } else {
-                answers.add(random.nextInt(41));
+                int wrongAnswer = random.nextInt(41);
+                while (wrongAnswer == a + b) {
+                    wrongAnswer = random.nextInt(41);
+                }
+                answers.add(wrongAnswer);
             }
         }
     }
