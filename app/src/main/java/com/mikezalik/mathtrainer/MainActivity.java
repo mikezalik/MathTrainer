@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         scoreTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
         newQuestion();
 
-        new CountDownTimer(5100, 1000) {
+        new CountDownTimer(30100, 1000) {
             @Override
             public void onTick(long l) {
                 timerTextView.setText(String.valueOf(l / 1000) + "s");
