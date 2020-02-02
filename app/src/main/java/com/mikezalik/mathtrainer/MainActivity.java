@@ -32,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
         startButton = findViewById(R.id.startButton);
 
         TextView mathsTextView = findViewById(R.id.mathsTextView);
+        Button button0 = findViewById(R.id.button0);
+        Button button1 = findViewById(R.id.button1);
+        Button button2 = findViewById(R.id.button2);
+        Button button3 = findViewById(R.id.button3);
 
         Random random = new Random();
 
@@ -53,5 +57,9 @@ public class MainActivity extends AppCompatActivity {
                 answers.add(wrongAnswer);
             }
         }
+        button0.setText(Integer.toString(answers.get(0)));
+        button1.setText(Integer.toString(answers.get(1)));
+        button2.setText(Integer.toString(answers.get(2)));
+        button3.setText(Integer.toString(answers.get(3)));
     }
 }
