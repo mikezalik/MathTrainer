@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         new CountDownTimer(30100, 1000) {
             @Override
             public void onTick(long l) {
-
+                timerTextView.setText(String.valueOf(l / 1000) + "s");
             }
 
             @Override
