@@ -7,11 +7,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
     Button startButton;
+    ArrayList<Integer> answers = new ArrayList<Integer>();
 
     public void start(View view) {
         startButton.setVisibility(View.INVISIBLE);
@@ -36,5 +39,13 @@ public class MainActivity extends AppCompatActivity {
         int b = random.nextInt(21);
 
         mathsTextView.setText(Integer.toString(a) + " + " + Integer.toString(b));
+
+        int locationOfCorrectAnswer = random.nextInt(4);
+
+        for (int i = 0; i < 4; i++) {
+            if (i == locationOfCorrectAnswer) {
+                answers.add(a + b);
+            }
+        }
     }
 }
