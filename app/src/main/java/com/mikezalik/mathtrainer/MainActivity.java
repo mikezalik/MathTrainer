@@ -16,12 +16,12 @@ public class MainActivity extends AppCompatActivity {
     Button startButton;
     ArrayList<Integer> answers = new ArrayList<Integer>();
 
-    public void start(View view) {
-        startButton.setVisibility(View.INVISIBLE);
-    }
-
     public void chooseAnswer(View view) {
 
+    }
+
+    public void start(View view) {
+        startButton.setVisibility(View.INVISIBLE);
     }
 
     @Override
