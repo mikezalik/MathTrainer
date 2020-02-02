@@ -26,12 +26,12 @@ public class MainActivity extends AppCompatActivity {
     int score = 0;
     int numberOfQuestions = 0;
 
+    Button newGameButton;
     Button startButton;
     Button button0;
     Button button1;
     Button button2;
     Button button3;
-
 
     public void chooseAnswer(View view) {
         if (Integer.toString(locationOfCorrectAnswer).equals(view.getTag().toString())) {
@@ -43,6 +43,27 @@ public class MainActivity extends AppCompatActivity {
         numberOfQuestions++;
         scoreTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
         newQuestion();
+    }
+
+    public void newGame (View view) {
+        score = 0;
+        numberOfQuestions = 0;
+        timerTextView.setText("30s");
+        scoreTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
+        newQuestion();
+
+        new CountDownTimer(5100, 1000) {
+            @Override
+            public void onTick(long l) {
+                timerTextView.setText(String.valueOf(l / 1000) + "s");
+            }
+
+            @Override
+            public void onFinish() {
+                resultTextView.setText("Time's up!");
+                newGameButton.setVisibility(View.VISIBLE);
+            }
+        }.start();
     }
 
     public void start(View view) {
@@ -83,30 +104,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startButton = findViewById(R.id.startButton);
         resultTextView = findViewById(R.id.resultTextView);
         scoreTextView = findViewById(R.id.scoreTextView);
         timerTextView = findViewById(R.id.timerTextView);
         mathsTextView = findViewById(R.id.mathsTextView);
 
+        newGameButton = findViewById(R.id.newGameButton);
+        startButton = findViewById(R.id.startButton);
         button0 = findViewById(R.id.button0);
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
 
-    newQuestion();
+    newGame(findViewById(R.id.timerTextView));
 
-        new CountDownTimer(5100, 1000) {
-            @Override
-            public void onTick(long l) {
-                timerTextView.setText(String.valueOf(l / 1000) + "s");
-            }
-
-            @Override
-            public void onFinish() {
-                resultTextView.setText("Time's up!");
-            }
-        }.start();
     }
 }
 
