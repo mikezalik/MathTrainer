@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
     newQuestion();
 
-        new CountDownTimer(30100, 1000) {
+        new CountDownTimer(5100, 1000) {
             @Override
             public void onTick(long l) {
                 timerTextView.setText(String.valueOf(l / 1000) + "s");
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-
+                resultTextView.setText("Time's up!");
             }
         }.start();
     }
