@@ -19,8 +19,11 @@ public class MainActivity extends AppCompatActivity {
     int locationOfCorrectAnswer;
 
     public void chooseAnswer(View view) {
-        view.getTag().toString();
-        Log.i("Tag:", view.getTag().toString());
+        if (Integer.toString(locationOfCorrectAnswer).equals(view.getTag().toString())) {
+            Log.i("Correct!", "You got the right answer!");
+        } else {
+            Log.i("Wrong!", "Wrong answer!");
+        }
     }
 
     public void start(View view) {
