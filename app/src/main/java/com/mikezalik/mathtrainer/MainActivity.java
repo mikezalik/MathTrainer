@@ -3,6 +3,7 @@ package com.mikezalik.mathtrainer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     TextView resultTextView;
     TextView scoreTextView;
     TextView mathsTextView;
+    TextView timerTextView;
 
     int locationOfCorrectAnswer;
     int score = 0;
@@ -84,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         startButton = findViewById(R.id.startButton);
         resultTextView = findViewById(R.id.resultTextView);
         scoreTextView = findViewById(R.id.scoreTextView);
-
+        timerTextView = findViewById(R.id.timerTextView);
         mathsTextView = findViewById(R.id.mathsTextView);
 
         button0 = findViewById(R.id.button0);
@@ -92,31 +94,19 @@ public class MainActivity extends AppCompatActivity {
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
 
+    newQuestion();
 
-        Random random = new Random();
+        new CountDownTimer(30100, 1000) {
+            @Override
+            public void onTick(long l) {
 
-        int a = random.nextInt(21);
-        int b = random.nextInt(21);
-
-        mathsTextView.setText(Integer.toString(a) + " + " + Integer.toString(b));
-
-        locationOfCorrectAnswer = random.nextInt(4);
-
-        for (int i = 0; i < 4; i++) {
-            if (i == locationOfCorrectAnswer) {
-                answers.add(a + b);
-            } else {
-                int wrongAnswer = random.nextInt(41);
-                while (wrongAnswer == a + b) {
-                    wrongAnswer = random.nextInt(41);
-                }
-                answers.add(wrongAnswer);
             }
-        }
-        button0.setText(Integer.toString(answers.get(0)));
-        button1.setText(Integer.toString(answers.get(1)));
-        button2.setText(Integer.toString(answers.get(2)));
-        button3.setText(Integer.toString(answers.get(3)));
+
+            @Override
+            public void onFinish() {
+
+            }
+        }.start();
     }
 }
 
