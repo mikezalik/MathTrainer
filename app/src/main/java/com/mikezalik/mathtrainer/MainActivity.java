@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.Random;
 
@@ -27,9 +28,13 @@ public class MainActivity extends AppCompatActivity {
 
         startButton = findViewById(R.id.startButton);
 
+        TextView mathsTextView = findViewById(R.id.mathsTextView);
+
         Random random = new Random();
 
         int a = random.nextInt(21);
         int b = random.nextInt(21);
+
+        mathsTextView.setText(Integer.toString(a) + " + " + Integer.toString(b));
     }
 }
