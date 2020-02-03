@@ -5,12 +5,10 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -35,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     Button button3;
 
     ConstraintLayout startLayout;
+    ConstraintLayout gameLayout;
 
     public void chooseAnswer(View view) {
         if (Integer.toString(locationOfCorrectAnswer).equals(view.getTag().toString())) {
@@ -53,8 +52,9 @@ public class MainActivity extends AppCompatActivity {
         numberOfQuestions = 0;
         timerTextView.setText("30s");
         scoreTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
-        newQuestion();
         newGameButton.setVisibility(View.INVISIBLE);
+        newQuestion();
+
 
         new CountDownTimer(30100, 1000) {
             @Override
@@ -122,9 +122,11 @@ public class MainActivity extends AppCompatActivity {
         button3 = findViewById(R.id.button3);
 
         startLayout = findViewById(R.id.startLayout);
+        gameLayout = findViewById(R.id.startLayout);
 
         startButton.setVisibility(View.VISIBLE);
-        startLayout.setVisibility(View.VISIBLE);
+        gameLayout.setVisibility(View.INVISIBLE);
+
 
     }
 }
