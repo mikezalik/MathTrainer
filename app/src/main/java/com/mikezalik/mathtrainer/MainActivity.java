@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         timerTextView.setText("30s");
         scoreTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
         newQuestion();
+        newGameButton.setVisibility(View.INVISIBLE);
 
         new CountDownTimer(30100, 1000) {
             @Override
