@@ -1,6 +1,7 @@
 package com.mikezalik.mathtrainer;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     Button button1;
     Button button2;
     Button button3;
+
+    ConstraintLayout startLayout;
 
     public void chooseAnswer(View view) {
         if (Integer.toString(locationOfCorrectAnswer).equals(view.getTag().toString())) {
@@ -69,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void start(View view) {
         startButton.setVisibility(View.INVISIBLE);
+        newGame(findViewById(R.id.timerTextView));
     }
 
     public void newQuestion () {
@@ -117,7 +121,10 @@ public class MainActivity extends AppCompatActivity {
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
 
-    newGame(findViewById(R.id.timerTextView));
+        startLayout = findViewById(R.id.startLayout);
+
+        startButton.setVisibility(View.VISIBLE);
+        startLayout.setVisibility(View.VISIBLE);
 
     }
 }
