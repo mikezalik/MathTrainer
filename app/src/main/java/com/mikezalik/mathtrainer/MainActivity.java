@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -54,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
         scoreTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
         newGameButton.setVisibility(View.INVISIBLE);
         resultTextView.setVisibility(View.INVISIBLE);
+        button0.setVisibility(View.VISIBLE);
+        button1.setVisibility(View.VISIBLE);
+        button2.setVisibility(View.VISIBLE);
+        button3.setVisibility(View.VISIBLE);
         newQuestion();
 
 
@@ -67,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
             public void onFinish() {
                 resultTextView.setText("Time's up!");
                 newGameButton.setVisibility(View.VISIBLE);
+                button0.setVisibility(View.INVISIBLE);
+                button1.setVisibility(View.INVISIBLE);
+                button2.setVisibility(View.INVISIBLE);
+                button3.setVisibility(View.INVISIBLE);
             }
         }.start();
     }
@@ -127,8 +136,6 @@ public class MainActivity extends AppCompatActivity {
 
         startButton.setVisibility(View.VISIBLE);
         gameLayout.setVisibility(View.INVISIBLE);
-
-
     }
 }
 
