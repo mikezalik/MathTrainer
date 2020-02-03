@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
     Button button2;
     Button button3;
 
-    ConstraintLayout startLayout;
     ConstraintLayout gameLayout;
 
     public void chooseAnswer(View view) {
@@ -72,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void start(View view) {
         startButton.setVisibility(View.INVISIBLE);
+        gameLayout.setVisibility(View.VISIBLE);
         newGame(findViewById(R.id.timerTextView));
     }
 
@@ -121,8 +121,7 @@ public class MainActivity extends AppCompatActivity {
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
 
-        startLayout = findViewById(R.id.startLayout);
-        gameLayout = findViewById(R.id.startLayout);
+        gameLayout = findViewById(R.id.gameLayout);
 
         startButton.setVisibility(View.VISIBLE);
         gameLayout.setVisibility(View.INVISIBLE);
