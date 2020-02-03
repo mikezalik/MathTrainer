@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     ConstraintLayout gameLayout;
 
     public void chooseAnswer(View view) {
+        resultTextView.setVisibility(View.VISIBLE);
         if (Integer.toString(locationOfCorrectAnswer).equals(view.getTag().toString())) {
             resultTextView.setText("Correct");
             score++;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         timerTextView.setText("30s");
         scoreTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
         newGameButton.setVisibility(View.INVISIBLE);
+        resultTextView.setVisibility(View.INVISIBLE);
         newQuestion();
 
 
