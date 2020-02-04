@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Math Trainer</string>
     <string name="Correct">Correct</string>
+    <string name="defaultAnswerText">10</string>
 </resources>
