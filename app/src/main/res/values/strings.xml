@@ -9,4 +9,5 @@
     <string name="new_game">New Game</string>
     <string name="_30s">30s</string>
     <string name="Correct_Answer">Correct</string>
+    <string name="Incorrect_Answer">Incorrect</string>
 </resources>

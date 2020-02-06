@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             resultTextView.setText(getString(R.string.Correct_Answer));
             score++;
         } else {
-            resultTextView.setText("Incorrect");
+            resultTextView.setText(getString(R.string.Incorrect_Answer));
         }
         numberOfQuestions++;
         scoreTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
