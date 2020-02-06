@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                resultTextView.setText("Time's up!");
+                resultTextView.setText(getString(R.string.Time_is_up));
                 newGameButton.setVisibility(View.VISIBLE);
                 button0.setVisibility(View.INVISIBLE);
                 button1.setVisibility(View.INVISIBLE);

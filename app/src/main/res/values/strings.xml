@@ -11,4 +11,5 @@
     <string name="Correct_Answer">Correct</string>
     <string name="Incorrect_Answer">Incorrect</string>
     <string name="Timer_SetText">30s</string>
+    <string name="Time_is_up">Time\'s up!</string>
 </resources>
