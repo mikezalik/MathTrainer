@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     public void chooseAnswer(View view) {
         resultTextView.setVisibility(View.VISIBLE);
         if (Integer.toString(locationOfCorrectAnswer).equals(view.getTag().toString())) {
-            resultTextView.setText("Correct");
+            resultTextView.setText(getString(R.string.Correct_Answer));
             score++;
         } else {
             resultTextView.setText("Incorrect");
