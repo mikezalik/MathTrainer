@@ -14,7 +14,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<Integer> answers = new ArrayList<Integer>();
+    ArrayList<Integer> answers = new ArrayList<>();
 
     TextView resultTextView;
     TextView scoreTextView;
