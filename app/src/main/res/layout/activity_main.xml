@@ -164,7 +164,7 @@
             android:layout_marginTop="20dp"
             android:background="@android:color/holo_blue_bright"
             android:padding="20dp"
-            android:text="30s"
+            android:text="@string/_30s"
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
