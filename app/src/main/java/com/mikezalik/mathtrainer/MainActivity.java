@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     public void newGame (View view) {
         score = 0;
         numberOfQuestions = 0;
-        timerTextView.setText("30s");
+        timerTextView.setText(getString(R.string.Timer_SetText));
         scoreTextView.setText(Integer.toString(score) + "/" + Integer.toString(numberOfQuestions));
         newGameButton.setVisibility(View.INVISIBLE);
         resultTextView.setVisibility(View.INVISIBLE);
