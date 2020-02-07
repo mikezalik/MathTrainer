@@ -139,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
 }
 
 //Dynamic questions?
+
 /*
 Rough sketch of dynamic question population based on answers being correct or incorrect. The idea is to increment or decrement the difficulty counter based on how they're answering. If they continue to answer
 the questions correctly, the questions provided will become more difficult and vice versa.
