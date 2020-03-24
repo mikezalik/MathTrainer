@@ -14,17 +14,21 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Arrays
     ArrayList<Integer> answers = new ArrayList<>();
 
+    //TextViews
     TextView resultTextView;
     TextView scoreTextView;
     TextView mathsTextView;
     TextView timerTextView;
 
+    //ints
     int locationOfCorrectAnswer;
     int score = 0;
     int numberOfQuestions = 0;
 
+    //Buttons
     Button newGameButton;
     Button startButton;
     Button button0;
@@ -32,8 +36,10 @@ public class MainActivity extends AppCompatActivity {
     Button button2;
     Button button3;
 
+    //Layouts
     ConstraintLayout gameLayout;
 
+    //Method to determine whether answer is correct or not
     public void chooseAnswer(View view) {
         resultTextView.setVisibility(View.VISIBLE);
         if (Integer.toString(locationOfCorrectAnswer).equals(view.getTag().toString())) {
@@ -47,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         newQuestion();
     }
 
+    //Resets game
     public void newGame (View view) {
         score = 0;
         numberOfQuestions = 0;
