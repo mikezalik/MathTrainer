@@ -59,7 +59,7 @@
                 android:id="@+id/button1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@android:color/holo_green_light"
+                android:background="@android:color/holo_green_dark"
                 android:onClick="chooseAnswer"
                 android:padding="5dp"
                 android:tag="1"
